@@ -21,12 +21,14 @@ class WordObject(object):
                          "BAN", "BAT", "BEE", "BOA", "EAR",
                          "EEL", "EFT", "FAR", "FAT", "FIT",
                          "LEE", "OAF", "RAT", "TAR", "TIE"]
+        self.Original = copy.deepcopy(self.WordList)
 
         return self
 
 
 class CSP(object):
     Puzzle = []
+    Assignment = {}
 
     A1 = WordObject()
     A2 = WordObject()
@@ -42,4 +44,4 @@ class CSP(object):
     Puzzle.append(D2.CreateLine(1, 4))
     Puzzle.append(D3.CreateLine(2, 5))
 
-    Assigment = {}
+
