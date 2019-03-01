@@ -4,11 +4,9 @@ import copy
 
 def main():
     cross = Crossword.CSP()
-
-
     # print(cross.Puzzle)
     # #print(BacktrackingSearch.selectUnassignedVar(cross))
-    # print(BacktrackingSearch.TestingConstraints(cross.A1, cross, "BAT"))
+    #print(BacktrackingSearch.TestingConstraints(cross.A1, cross, "BAT"))
     # print("D1:", cross.D1.WordList)
     # print("D2:", cross.D2.WordList)
     # print("D3:", cross.D3.WordList)
@@ -23,7 +21,7 @@ def main():
 
 
     BacktrackingSearch.BacktrackingSearch(cross)
-    #print(cross.Assignment)
+    print(cross.Assignment)
     # print(cross.A1.Word)
     # print(cross.A1.Word)
     # print(cross.A1.Word)

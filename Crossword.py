@@ -28,7 +28,7 @@ class WordObject(object):
 
 class CSP(object):
     Puzzle = []
-    Assignment = {}
+    #Assignment = {}
 
     A1 = WordObject()
     A2 = WordObject()
