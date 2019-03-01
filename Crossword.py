@@ -1,18 +1,19 @@
 import copy
 
 class WordObject(object):
+    Name = ""
     Word = ""
     WordList = []
-    NrWords = 0
+    NrWords = -1
     Line = -1
     Index = -1
 
-    def CreateLine(self, index, line):
+    def CreateLine(self, index, line, name):
         self.Word = "000"
         self.NrWords = 40
         self.Index = index
         self.Line = line
-
+        self.Name = name
         self.WordList = ["ADD", "ADO", "AGE", "AGO", "AID",
                          "AIL", "AIM", "AIR", "AND", "ANY",
                          "APE", "APT", "ARC", "ARE", "ARK",
@@ -21,14 +22,12 @@ class WordObject(object):
                          "BAN", "BAT", "BEE", "BOA", "EAR",
                          "EEL", "EFT", "FAR", "FAT", "FIT",
                          "LEE", "OAF", "RAT", "TAR", "TIE"]
-        self.Original = copy.deepcopy(self.WordList)
-
         return self
 
 
 class CSP(object):
     Puzzle = []
-    #Assignment = {}
+    Assignment = {}
 
     A1 = WordObject()
     A2 = WordObject()
@@ -37,11 +36,10 @@ class CSP(object):
     D2 = WordObject()
     D3 = WordObject()
 
-    Puzzle.append(A1.CreateLine(0, 0))
-    Puzzle.append(A2.CreateLine(1, 1))
-    Puzzle.append(A3.CreateLine(2, 2))
-    Puzzle.append(D1.CreateLine(0, 3))
-    Puzzle.append(D2.CreateLine(1, 4))
-    Puzzle.append(D3.CreateLine(2, 5))
-
-
+    Puzzle.append(A1.CreateLine(0, 0, "A1"))
+    Puzzle.append(A2.CreateLine(1, 1, "A2"))
+    Puzzle.append(A3.CreateLine(2, 2, "A3"))
+    Puzzle.append(D1.CreateLine(0, 3, "D1"))
+    Puzzle.append(D2.CreateLine(1, 4, "D2"))
+    Puzzle.append(D3.CreateLine(2, 5, "D3"))
+    Original = copy.deepcopy(A1.WordList)
